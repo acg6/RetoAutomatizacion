@@ -31,7 +31,7 @@ private static final Logger logger = LoggerFactory.getLogger(SmokeTestEngageRunn
 	@CucumberOptions(
 			plugin = {"pretty","json:target/cucumber.json", "rerun:target/rerun.txt"}
 			,features = "src/test/resources/features"
-			,tags = "@cargaPagina"
+			,tags = "@EnvioSolicitudFormulario"
 			,snippets = CAMELCASE
 			,glue = {"regional.definitions"})
 	public class TestRunnerSmokeTest{

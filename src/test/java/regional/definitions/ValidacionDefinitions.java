@@ -60,9 +60,9 @@ public class ValidacionDefinitions {
 	
 	@When("rellena formulario")
 	public void completarFormulario(DataTable datos) {
-		List<List<String>> data = datos.raw();
+		List<List<String>> data =  datos.asLists();
 		for (int i = 0; i < data.size(); i++) {
-			validacionSteps.completarFormularioValidar(data, i);
+			validacionSteps.completarFormulario(data, i);
 			}
 	}
 	
@@ -74,6 +74,14 @@ public class ValidacionDefinitions {
 	@When("valida envio de formulario incorrecto")
 	public void validarEnvioFormularioIncorrecto() {
 		validacionSteps.validarEnvioFormularioIncorrecto();
+	}
+	
+	@When("rellena formulario validar")
+	public void completarFormularioValidar(DataTable datos) {
+		List<List<String>> data =  datos.asLists();
+		for (int i = 0; i < data.size(); i++) {
+			validacionSteps.completarFormularioValidar(data, i);
+			}
 	}
 
 
