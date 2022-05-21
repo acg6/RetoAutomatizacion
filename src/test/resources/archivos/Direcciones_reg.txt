@@ -1,0 +1,6 @@
+DIR-CL=AV. JOSÉ JOAQUÍN PÉREZ 4411 (8500000) RM
+DIR-AR=CORREA 3229 
+DIR-UY=Campillos 3716
+DIR-PE=Jorge Basadre 498, Lima 27 ASUNCION
+DIR-EC=De Los Guayacanes, Quito, Pichincha
+DIR-CO=CL 41 # 17 - 26, San Jose, Sur Oriente, Barranquilla

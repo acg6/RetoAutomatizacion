@@ -1,0 +1,26 @@
+	{
+	  customers(
+	    environment: { box: "#$ambiente", country: "#$pais" }
+	    page: { pageNumber: 0, numberOfResults: 1 }
+	    ibsCustomerInputs: {
+	      orderBy: { orderByColumn: "DBMS_RANDOM.RANDOM" }
+	      distinct: true
+	      sustatusInput: { id: 6 }
+	      customerClassInput: { id: 3 }
+	     segmentationInput:{segId:[#$segId]}
+	      agreementInputs: { agreementTypeInput: { id: [#$agreementTypeInput] } }
+	      agreementDetailInputs: {
+	        commercialProductInput: { commercialProductCategoryInput: { id: 3 } }
+	        agreementDetailStatusInput: { id: 1 }
+	      }
+	    }
+	  ) {
+	    ibsCustomer {
+	      id
+	      segmentation{segDesc}
+	      agreements{agreementType{description}}
+	     
+	    }
+	  }
+	}
+	

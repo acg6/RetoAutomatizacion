@@ -1,0 +1,38 @@
+{
+  customers(
+    environment: { box: "#$ambiente", country: "#$pais" }
+    page: { pageNumber: 0, numberOfResults: 1 }
+    ibsCustomerInputs: {
+      orderBy: { orderByColumn: "DBMS_RANDOM.RANDOM" }
+      sustatusInput: { id: 10 }
+      customerClassInput: { id: 2 }
+      agreementDetailInputs: [
+        {
+          agreementDetailStatusInput: { id: 3 }
+          commercialProductInput: {
+            commercialProductCategoryInput: { id: [5] }
+          }
+          deviceAgreementDetailInputs: {
+            deviceInput: { deviceStatusInput: { id: [2, 3] } }
+          }
+          booleanOperator: AND
+        }
+        {
+          agreementDetailStatusInput: { id: 3 }
+          commercialProductInput: {
+            commercialProductCategoryInput: { id: [3] }
+          }
+        }
+      ]
+      suhistorInputs: {
+        systemEventInput: { id: 142 }
+        createDatetime: { operator: greaterThan, value: "12/12/2019" }
+      }
+    }
+  ) {
+    ibsCustomer {
+      id
+    }
+  }
+}
+

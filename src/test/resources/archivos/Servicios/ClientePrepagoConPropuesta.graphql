@@ -1,0 +1,24 @@
+{
+  findLoyaltyPromotionForCustomer(
+    sesamoEnvironment: { box: "#$ambiente", country: "#$pais" }
+    ibsCustomerInputs: {
+      orderBy: { orderByColumn: "DBMS_RANDOM.RANDOM" }
+      customerClassInput: { id: 1 }
+      agreementDetailInputs: {
+        chargeUntilDate:{operator:lessThanOrEqual,value:"20-5-2021"}
+        commercialProductInput: { commercialProductCategoryInput: { id: 3 } }
+        agreementDetailStatusInput: { id: #$idAgreementOFFPrePago }
+      }
+    }
+  ) {
+    ibsCustomer {
+      ibsCustomer{
+        id
+      }
+    }
+    responseMetadataTypeFindLoyalty {
+      returnCode
+      returnMessage
+    }
+  }
+}

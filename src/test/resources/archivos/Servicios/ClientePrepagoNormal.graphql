@@ -1,0 +1,22 @@
+{
+customers(
+	environment: { box: "#$ambiente", country: "#$pais" }
+	page: { pageNumber: 0, numberOfResults: 1 }
+	ibsCustomerInputs: {
+		orderBy:{orderByColumn:"DBMS_RANDOM.RANDOM"}
+		distinct:true
+		sustatusInput: { id: 6 }
+		customerClassInput: { id: 1 }
+		agreementDetailInputs: {
+			financialAccountInput:{accstatInput:{id:16}}
+			commercialProductInput:{commercialProductCategoryInput:{id:3}}
+			agreementDetailStatusInput: { id: #$idAgreementONPrePago }
+			financialAccountInput: { balance: { operator: lessThanOrEqual, value: 0 } }
+		}
+	}
+  ) {
+	ibsCustomer {
+	id
+	}
+  }
+}
